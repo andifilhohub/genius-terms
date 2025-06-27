@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Genius Cloud</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #029967 0%, #017a4f 100%);
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #029967;
+            z-index: 1000;
+            transition: width 0.2s;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #029967;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        .back-to-top:hover {
+            background: #017a4f;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            width: 5px;
+            background: #029967;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Header -->
+    <header class="hero-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <div class="bg-white p-2 rounded-lg mr-4">
+                        <img src="logo_thumbnail.png" width="30" height="30" alt="Logo" />
+
+                    </div>
+                    <h1 class="text-3xl font-bold">Genius Cloud</h1>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-lg font-medium">Política de Privacidade</p>
+                    <p class="text-sm opacity-80">Última atualização: <span id="currentDate"></span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <p class="text-lg mb-6">A sua privacidade é importante para nós. Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações ao utilizar o sistema Genius Cloud – um sistema de automação e centralização de mensagens que integra ferramentas como Chatwoot, Evolution, Typebot, N8N e plataformas da Meta (WhatsApp, Instagram, Facebook).</p>
+            
+            <div class="space-y-12">
+                <!-- Section 1 -->
+                <section id="section1">
+                    <h2 class="text-2xl font-bold mb-4 section-title">1. Coleta de Informações</h2>
+                    <p class="mb-4">Coletamos os seguintes tipos de dados, conforme sua interação com nossos sistemas:</p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li>Nome, número de telefone, e-mail e outras informações fornecidas voluntariamente.</li>
+                        <li>Mensagens enviadas por canais integrados, como WhatsApp, Instagram, Facebook Messenger, etc.</li>
+                        <li>Respostas em formulários interativos via Typebot.</li>
+                        <li>Dados de navegação e atividade, como logs, horários de acesso e IP.</li>
+                        <li>Informações capturadas em fluxos automatizados via N8N, quando autorizados.</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 2 -->
+                <section id="section2">
+                    <h2 class="text-2xl font-bold mb-4 section-title">2. Uso das Informações</h2>
+                    <p class="mb-4">As informações coletadas são utilizadas com os seguintes objetivos:</p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li>Centralizar o atendimento ao cliente em uma única plataforma (Chatwoot).</li>
+                        <li>Automatizar respostas, lembretes e mensagens com base no comportamento e nas interações do usuário.</li>
+                        <li>Personalizar a experiência do cliente.</li>
+                        <li>Analisar o uso dos serviços para fins de melhoria contínua.</li>
+                        <li>Cumprir obrigações legais ou regulatórias.</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 3 -->
+                <section id="section3">
+                    <h2 class="text-2xl font-bold mb-4 section-title">3. Compartilhamento de Dados</h2>
+                    <p class="mb-4">Seus dados não são vendidos ou compartilhados com terceiros para fins comerciais. O compartilhamento pode ocorrer apenas quando necessário para a operação dos serviços, como:</p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li>Envio de mensagens via APIs da Meta (WhatsApp Business API, Messenger, Instagram Direct).</li>
+                        <li>Integrações técnicas com sistemas como Evolution, Typebot ou N8N.</li>
+                    </ul>
+                    <p>Todos os terceiros envolvidos seguem políticas de segurança e privacidade compatíveis com a LGPD.</p>
+                </section>
+                
+                <!-- Section 4 -->
+                <section id="section4">
+                    <h2 class="text-2xl font-bold mb-4 section-title">4. Armazenamento e Segurança</h2>
+                    <p class="mb-4">Adotamos medidas técnicas e administrativas para proteger suas informações:</p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li>Armazenamento em servidores com acesso restrito.</li>
+                        <li>Criptografia e autenticação nos sistemas integrados.</li>
+                        <li>Backups regulares e monitoramento de atividades suspeitas.</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 5 -->
+                <section id="section5">
+                    <h2 class="text-2xl font-bold mb-4 section-title">5. Cookies e Tecnologias de Rastreamento</h2>
+                    <p class="mb-4">Caso você utilize nossos serviços via navegador, cookies poderão ser usados para:</p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li>Manter sua sessão ativa.</li>
+                        <li>Lembrar preferências e histórico de navegação.</li>
+                        <li>Gerar relatórios estatísticos sobre o uso da plataforma.</li>
+                    </ul>
+                    <p>Você pode gerenciar cookies nas configurações do seu navegador.</p>
+                </section>
+                
+                <!-- Section 6 -->
+                <section id="section6">
+                    <h2 class="text-2xl font-bold mb-4 section-title">6. Seus Direitos</h2>
+                    <p class="mb-4">De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem os seguintes direitos:</p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li>Acessar os dados pessoais que temos sobre você.</li>
+                        <li>Corrigir ou atualizar dados imprecisos.</li>
+                        <li>Solicitar a exclusão de dados, quando permitido.</li>
+                        <li>Revogar consentimentos dados anteriormente.</li>
+                        <li>Solicitar portabilidade para outro fornecedor de serviço.</li>
+                    </ul>
+                    <p>Para exercer seus direitos, entre em contato conosco (dados abaixo).</p>
+                </section>
+                
+                <!-- Section 7 -->
+                <section id="section7">
+                    <h2 class="text-2xl font-bold mb-4 section-title">7. Encarregado pelo Tratamento de Dados</h2>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="font-medium mb-1">Responsável:</p>
+                        <p class="mb-3">HAMAGUTI E BRAGA SOLUCOES TECNOLOGICAS LTDA</p>
+                        <p class="font-medium mb-1">E-mail para contato:</p>
+                        <p>bragaeletrica@gmail.com</p>
+                    </div>
+                </section>
+                
+                <!-- Section 8 -->
+                <section id="section8">
+                    <h2 class="text-2xl font-bold mb-4 section-title">8. Atualizações desta Política</h2>
+                    <p class="mb-4">Esta Política de Privacidade poderá ser atualizada periodicamente. Sempre que houver alterações relevantes, informaremos por meio dos nossos canais oficiais.</p>
+                    <p class="font-medium">Ao utilizar nossos serviços, você concorda com esta Política de Privacidade.</p>
+                </section>
+            </div>
+        </div>
+        
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="bg-white p-2 rounded-lg mr-4">
+                            <img src="logo_thumbnail.png" width="30" height="30" alt="Logo" />
+
+                        </div>
+                        <h3 class="text-xl font-bold">Genius Cloud</h3>
+                    </div>
+                    <p class="mt-2 text-gray-400">Soluções em automação e centralização de mensagens</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">© <span id="currentYear"></span> Genius Cloud. Todos os direitos reservados.</p>
+                    <p class="text-gray-400 mt-1">Versão 1.0</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current date
+        const currentDate = new Date();
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        document.getElementById('currentDate').textContent = currentDate.toLocaleDateString('pt-BR', options);
+        
+        // Set current year
+        document.getElementById('currentYear').textContent = currentDate.getFullYear();
+        
+        // Scroll indicator
+        window.addEventListener('scroll', function() {
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            scrollIndicator.style.width = scrolled + '%';
+        });
+        
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
